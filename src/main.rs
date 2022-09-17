@@ -4,10 +4,11 @@ use std::io;
 
 fn main() {
 
+    let range: u32 = 101;
     let mut guess = String::new();
-    let secret_num = rand::thread_rng().gen_range(1, 10);
+    let secret_num = rand::thread_rng().gen_range(1, range);
 
-    println!("I\'m thinking of a number between 1 and 10!");
+    println!("Guess a number from 1 to 100!");
     println!("The secret number is: {}", secret_num);
 
     io::stdin().read_line(&mut guess)
