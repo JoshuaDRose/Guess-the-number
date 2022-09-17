@@ -17,9 +17,10 @@ fn main() {
     let guess: u32 = guess.trim().parse()
         .expect("Please type a number");
 
-    match guess.cmp(&secret_num) {
-        Ordering::Less => println!("Higher"),
-        Ordering::Greater => println!("Lower"),
-        Ordering::Equal => println!("Correct!"),
-    }
+    loop {
+        match guess.cmp(&secret_num) {
+            Ordering::Less => println!("Higher"),
+            Ordering::Greater => println!("Lower"),
+            Ordering::Equal => println!("Correct!"),
+        }
 }
